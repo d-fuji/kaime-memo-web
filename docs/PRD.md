@@ -371,11 +371,11 @@
 
 | 項目 | 採用技術 | 備考 |
 |------|---------|------|
-| フレームワーク | Next.js 15 (App Router) | クライアント側は React Server Components は最小、対話部は `'use client'` |
+| フレームワーク | Next.js 16 (App Router) | クライアント側は React Server Components は最小、対話部は `'use client'` |
 | UI ライブラリ | React 19 | |
 | スタイリング | Tailwind CSS 3 | インラインの CSS 変数で和テイスト配色を定義 |
 | アイコン | lucide-react | |
-| 言語 | JavaScript (JSX) | 将来的に TypeScript への移行余地あり |
+| 言語 | TypeScript (TSX) | `strict: true`。型定義は `app/page.tsx` 冒頭に集約 |
 
 ### 10.2 ランタイム・ツール
 
@@ -384,6 +384,7 @@
 | Node.js | 24 LTS | |
 | パッケージマネージャ | npm | |
 | ビルド | Next.js 内蔵 (Turbopack) | |
+| Linter / Formatter | Biome 2 | `biome.json` で一元管理、`npm run check` で一括検査 |
 
 ### 10.3 データ永続化
 

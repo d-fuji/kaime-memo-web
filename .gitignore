@@ -6,5 +6,9 @@ out/
 .env*.local
 .vercel
 
+# TypeScript incremental build cache
+*.tsbuildinfo
+
 # Claude Code local settings
 .claude/settings.local.json
+.claude/worktrees/
