@@ -24,8 +24,13 @@ body {
 }
 
 input,
-textarea {
+textarea,
+select {
   font-family: inherit;
+  /* iOS Safari はフォント 16px 未満でフォーカス時にページをズームさせるため、
+     Tailwind の text-xs/text-sm を打ち消して最小 16px を強制する */
+  /* biome-ignore lint/complexity/noImportantStyles: override Tailwind text-sm utility */
+  font-size: 16px !important;
 }
 
 textarea {

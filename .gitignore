@@ -12,3 +12,6 @@ out/
 # Claude Code local settings
 .claude/settings.local.json
 .claude/worktrees/
+
+# Next.js auto-generated (flips between dev/build)
+next-env.d.ts
