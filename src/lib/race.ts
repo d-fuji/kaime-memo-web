@@ -46,3 +46,40 @@ export function createSampleRace(): Race {
   ];
   return race;
 }
+
+export function createSatsukishoSampleRace(): Race {
+  const race = createEmptyRace('中山', 11, '皐月賞', 18);
+  race.horses = [
+    { number: 1, name: 'カヴァレリッツォ', mark: '◎', note: '1番人気想定、本命' },
+    { number: 2, name: 'サウンドムーブ', mark: null, note: '' },
+    { number: 3, name: 'サノノグレーター', mark: null, note: '' },
+    { number: 4, name: 'ロブチェン', mark: '○', note: '上位人気' },
+    { number: 5, name: 'アスクエジンバラ', mark: null, note: '' },
+    { number: 6, name: 'フォルテアンジェロ', mark: null, note: '' },
+    { number: 7, name: 'ロードフィレール', mark: '△', note: '' },
+    { number: 8, name: 'マテンロウゲイル', mark: null, note: '' },
+    { number: 9, name: 'ライヒスアドラー', mark: null, note: '' },
+    { number: 10, name: 'ラージアンサンブル', mark: null, note: '' },
+    { number: 11, name: 'パントルナイーフ', mark: null, note: '' },
+    { number: 12, name: 'グリーンエナジー', mark: '▲', note: '上位人気' },
+    { number: 13, name: 'アクロフェイズ', mark: null, note: '' },
+    { number: 14, name: 'ゾロアストロ', mark: null, note: '' },
+    { number: 15, name: 'リアライズシリウス', mark: '△', note: '' },
+    { number: 16, name: 'アルトラムス', mark: null, note: '' },
+    { number: 17, name: 'アドマイヤクワッズ', mark: null, note: '' },
+    { number: 18, name: 'バステール', mark: '△', note: '' },
+  ];
+  race.raceMemo = '中山芝2000m G1。カヴァ軸で上位人気を厚く';
+  race.bets = [
+    {
+      id: crypto.randomUUID(),
+      kenshu: 'sanrenpuku',
+      kaikata: 'formation',
+      g1: [1],
+      g2: [4, 12],
+      g3: [7, 15, 18],
+      amountPerPoint: 200,
+    },
+  ];
+  return race;
+}

@@ -3,11 +3,14 @@
 import { useMemo, useState } from 'react';
 import { HomeScreen } from '@/components/HomeScreen';
 import { RaceDetail } from '@/components/RaceDetail';
-import { createSampleRace } from '@/lib/race';
+import { createSampleRace, createSatsukishoSampleRace } from '@/lib/race';
 import type { Race } from '@/lib/types';
 
 export default function App() {
-  const [races, setRaces] = useState<Race[]>(() => [createSampleRace()]);
+  const [races, setRaces] = useState<Race[]>(() => [
+    createSatsukishoSampleRace(),
+    createSampleRace(),
+  ]);
   const [currentRaceId, setCurrentRaceId] = useState<string | null>(null);
 
   const currentRace = useMemo(
